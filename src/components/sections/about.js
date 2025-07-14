@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['Python', 'Java', 'C++', 'JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'SQL', 'NoSQL', 'Git', 'Docker', 'Kubernetes', 'AWS'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,33 +135,25 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Nilesh and I enjoy solving problems ranging from one's local neighbourhood to the global level! 
+              I am currently pursuing an MS in Computer Science at UMass Amherst. I completed my Bachelor’s from BITS Pilani in Electrical and Electronics Engineering, 
+              where I explored various engineering domains surrounding areas of Computer Science, especially AI/Data Science and Electronics. During my undergrad college time, 
+              I had completed internships in the domains of Data Science (Machine Learning, Deep Learning (NLP), Statistics) and SDE, Analog and Digital Electronics and Electrical engineering.
             </p>
-
+            
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              I have more than 3 years of experience as an MLE at Comcast in their Applied Division, where I contributed and was one of a core member in the development and scaling of AI4Ops platform 
+              which is now being used for their enterprise-wide AI-powered intelligent monitoring and orchestrating company software. In a semester long internship with Jupiter (fintech unicorn startup in India) in their Data Science team, 
+              I gained a lot of professional level practices to be followed in Software Dev apart from several cutting-edge AI related projects.
             </p>
-
+            
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              My current passion lies in exploring the potential of AI, particularly in the areas of Reinforcement Learning and its application for NLP and CV problems. 
+              Apart from this I’m interested in a lot of things like Physics, Maths, Semiconductor, Engineering, Sports, Finance, etc.
+              I am currently looking forward to connecting with professionals (both research or engineering) and engaging in opportunities in AI and Software Engineering, to create innovative and helpful tech.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I’ve worked with:</p>
           </div>
 
           <ul className="skills-list">
