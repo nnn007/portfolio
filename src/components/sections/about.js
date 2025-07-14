@@ -135,22 +135,20 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Nilesh and I enjoy solving problems ranging from one's local neighbourhood to the global level! 
-              I am currently pursuing an MS in Computer Science at UMass Amherst. I completed my Bachelor’s from BITS Pilani in Electrical and Electronics Engineering, 
-              where I explored various engineering domains surrounding areas of Computer Science, especially AI/Data Science and Electronics. During my undergrad college time, 
-              I had completed internships in the domains of Data Science (Machine Learning, Deep Learning (NLP), Statistics) and SDE, Analog and Digital Electronics and Electrical engineering.
+            Hi! I'm Nilesh, a Computer Science MS student at UMass Amherst with a background in Electrical and Electronics 
+            Engineering from BITS Pilani. During undergrad, I interned across domains including SDE, ML, NLP, Statistics and Electronics.
             </p>
             
             <p>
-              I have more than 3 years of experience as an MLE at Comcast in their Applied Division, where I contributed and was one of a core member in the development and scaling of AI4Ops platform 
-              which is now being used for their enterprise-wide AI-powered intelligent monitoring and orchestrating company software. In a semester long internship with Jupiter (fintech unicorn startup in India) in their Data Science team, 
-              I gained a lot of professional level practices to be followed in Software Dev apart from several cutting-edge AI related projects.
+            Recently, I interned at Microsoft, where I worked with AI development team (MAIDAP). I have 3+ years of experience as an MLE at Comcast, where I was a 
+            core contributor to the AI4Ops platform for intelligent software monitoring. I also interned at the fintech startup Jupiter, gaining hands-on experience 
+            in both software engineering and AI project practices.
             </p>
             
             <p>
-              My current passion lies in exploring the potential of AI, particularly in the areas of Reinforcement Learning and its application for NLP and CV problems. 
-              Apart from this I’m interested in a lot of things like Physics, Maths, Semiconductor, Engineering, Sports, Finance, etc.
-              I am currently looking forward to connecting with professionals (both research or engineering) and engaging in opportunities in AI and Software Engineering, to create innovative and helpful tech.
+            I’m passionate about software engineering and AI, especially NLP, CV and Reinforcement Learning. Beyond tech, 
+            I’m curious about physics, math, semiconductors, sports, and finance. I'm actively seeking opportunities to 
+            collaborate on impactful AI and software engineering projects.
             </p>
 
             <p>Here are a few technologies I’ve worked with:</p>

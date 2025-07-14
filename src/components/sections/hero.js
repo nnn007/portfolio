@@ -70,8 +70,8 @@ const Hero = () => {
         cutting-edge project 
         at{' '}
         <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-new-england/" target="_blank" rel="noreferrer">
-          Microsoft Research
-        </a> and continuing to work on GraphRAG.
+          Microsoft
+        </a> during my internship and continuing to work on GraphRAG.
       </p>
     </>
   );

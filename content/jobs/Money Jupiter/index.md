@@ -1,7 +1,7 @@
 ---
 date: '2020-12-15'
 title: 'Software Development Intern'
-company: 'Jupiter (a fintech unicorn startup)'
+company: 'Jupiter'
 location: 'Bengaluru, KA'
 range: 'Jul - Dec 2020'
 url: 'https://jupiter.money/'
