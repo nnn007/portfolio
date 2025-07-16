@@ -1,5 +1,5 @@
 ---
-date: '2024-07-17'
+date: '2024-07-01'
 title: 'Information Retrieval Benchmarking'
 github: 'https://github.com/nnn007/ir-benchmark'
 external: 'https://github.com/nnn007/ir-benchmark'

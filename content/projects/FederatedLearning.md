@@ -1,5 +1,5 @@
 ---
-date: '2024-07-01'
+date: '2024-07-17'
 title: 'Smart Nutrition App'
 github: 'https://github.com/nnn007/federated-learning-setup'
 external: 'https://github.com/nnn007/federated-learning-setup'
