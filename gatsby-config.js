@@ -159,11 +159,13 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          'G-XXXXXXXXXX', // Replace with your GA4 measurement ID
+          'G-L8KCTLQEK7', // Replace with your GA4 measurement ID
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
+          // Avoid the default initial page_view; let Gatsby handle SPA pageviews
+          send_page_view: false,
           anonymize_ip: true,
           cookie_expires: 0,
         },
