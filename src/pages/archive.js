@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 
@@ -148,7 +147,10 @@ const ArchivePage = ({ location, data }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title="Archive" />
+      <Head 
+        title="Archive"
+        description="A comprehensive archive of all projects and work completed by Nilesh Nayan, including software development, machine learning, and web applications."
+      />
 
       <main>
         <header ref={revealTitle}>

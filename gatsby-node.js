@@ -105,3 +105,22 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
   });
 };
+
+// Custom sitemap configuration for better SEO
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+    }
+    type Frontmatter {
+      title: String!
+      description: String
+      date: Date! @dateformat
+      slug: String!
+      tags: [String]
+      draft: Boolean
+    }
+  `;
+  createTypes(typeDefs);
+};

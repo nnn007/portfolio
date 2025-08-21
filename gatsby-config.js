@@ -2,12 +2,16 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Nilesh Nayan',
+    title: 'Nilesh Nayan - Software Engineer & AI Specialist | Portfolio',
     description:
-      'Nilesh Nayan is an engineer who specializes in software development and machine learning (AI).',
+      'Nilesh Nayan is a software engineer and AI specialist. View Nilesh Nayan\'s portfolio, projects, and blog posts on software development, machine learning, and artificial intelligence.',
     siteUrl: 'https://nnn007.github.io', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@nayannilesh',
+    author: 'Nilesh Nayan',
+    keywords: 'Nilesh Nayan, Nilesh Nayan portfolio, software engineer, machine learning, AI, artificial intelligence, web development, portfolio, software development, React, JavaScript, Python, developer, programmer',
+    language: 'en',
+    siteName: 'Nilesh Nayan Portfolio',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -150,9 +154,27 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'UA-45666519-2',
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-XXXXXXXXXX", // Replace with your GA4 measurement ID
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
       },
     },
   ],

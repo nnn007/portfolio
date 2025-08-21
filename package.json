@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "description": "Personal Website",
   "version": "1.0.0",
-  "author": "Nilesh Nayan <nilesh.nayan@gmail.com>",
+  "author": "Nilesh Nayan <nilesh.nayan42@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/nnn007/portfolio-website"
@@ -39,7 +39,7 @@
     "animejs": "^3.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.1",
-    "gatsby-plugin-google-analytics": "^3.4.0",
+    "gatsby-plugin-google-gtag": "^4.25.0",
     "gatsby-plugin-image": "^1.4.0",
     "gatsby-plugin-manifest": "^3.4.0",
     "gatsby-plugin-netlify": "^3.4.0",

@@ -2,9 +2,8 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Layout } from '@components';
+import { Layout, Head, Breadcrumb } from '@components';
 
 const StyledPostContainer = styled.main`
   max-width: 1000px;
@@ -52,17 +51,25 @@ const StyledPostContent = styled.div`
 
 const PostTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
-  const { title, date, tags } = frontmatter;
+  const { title, date, tags, description } = frontmatter;
 
   return (
     <Layout location={location}>
-      <Helmet title={title} />
+      <Head 
+        title={title}
+        description={description}
+        article={true}
+        canonical={`https://nnn007.github.io${frontmatter.slug}`}
+      />
 
       <StyledPostContainer>
-        <span className="breadcrumb">
-          <span className="arrow">&larr;</span>
-          <Link to="/pensieve">All memories</Link>
-        </span>
+        <Breadcrumb
+          items={[
+            { label: 'Home', url: '/' },
+            { label: 'Blog', url: '/pensieve' },
+            { label: title }
+          ]}
+        />
 
         <StyledPostHeader>
           <h1 className="medium-heading">{title}</h1>
@@ -87,6 +94,36 @@ const PostTemplate = ({ data, location }) => {
 
         <StyledPostContent dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPostContainer>
+
+      {/* Structured Data for Blog Post */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": title,
+          "description": description,
+          "author": {
+            "@type": "Person",
+            "name": "Nilesh Nayan",
+            "url": "https://nnn007.github.io"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Nilesh Nayan",
+            "url": "https://nnn007.github.io"
+          },
+          "datePublished": date,
+          "dateModified": date,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://nnn007.github.io${frontmatter.slug}`
+          },
+          "url": `https://nnn007.github.io${frontmatter.slug}`,
+          "keywords": tags ? tags.join(', ') : '',
+          "articleSection": "Blog",
+          "inLanguage": "en-US"
+        })}
+      </script>
     </Layout>
   );
 };

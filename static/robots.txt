@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_gatsby/
+
+# Allow important pages - prioritize personal branding pages
+Allow: /about-nilesh-nayan
+Allow: /pensieve/
+Allow: /archive/
+Allow: /projects/
+
+# Sitemap location
+Sitemap: https://nnn007.github.io/sitemap-index.xml
+
+# Host
+Host: https://nnn007.github.io
+
+# Crawl delay (optional)
+Crawl-delay: 1
