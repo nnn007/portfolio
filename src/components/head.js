@@ -82,6 +82,7 @@ const Head = ({ title, description, image, article, canonical }) => {
       <meta name="msapplication-TileColor" content="#0a192f" />
 
       {/* Google Site Verification */}
+      <meta name="google-site-verification" content="41SFuC52dtfSOOqOb2ZUVhMe1GC_WZXy9siXBzl4Y0o" />
       <meta name="google-site-verification" content="LP6fEXDXd2VjCsFwVhUQ6UcSjRSbjW9m5sWwDjEL0ZE" />
 
       {/* Structured Data - Person Schema */}
@@ -91,7 +92,7 @@ const Head = ({ title, description, image, article, canonical }) => {
           '@type': 'Person',
           name: 'Nilesh Nayan',
           alternateName: 'nnn007',
-          url: 'https://nnn007.github.io',
+          url: 'https://nilesh-nayan-portfolio.netlify.app',
           image: `${siteUrl}${defaultImage}`,
           sameAs: [
             'https://github.com/nnn007',
@@ -140,7 +141,8 @@ const Head = ({ title, description, image, article, canonical }) => {
             '@type': 'SearchAction',
             target: {
               '@type': 'EntryPoint',
-              urlTemplate: 'https://nnn007.github.io/search?q={search_term_string}',
+              urlTemplate:
+                'https://nilesh-nayan-portfolio.netlify.app/search?q={search_term_string}',
             },
             'query-input': 'required name=search_term_string',
           },
