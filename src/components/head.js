@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { useLocation } from '@reach/router';
+import { useLocation } from '@gatsbyjs/reach-router';
 import { useStaticQuery, graphql } from 'gatsby';
 
 // https://www.gatsbyjs.com/docs/add-seo-component/
@@ -87,61 +87,63 @@ const Head = ({ title, description, image, article, canonical }) => {
       {/* Structured Data - Person Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Nilesh Nayan",
-          "alternateName": "nnn007",
-          "url": "https://nnn007.github.io",
-          "image": `${siteUrl}${defaultImage}`,
-          "sameAs": [
-            "https://github.com/nnn007",
-            "https://twitter.com/nayannilesh",
-            "https://www.linkedin.com/in/nilesh-nayan",
-            "https://www.instagram.com/42._me"
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Nilesh Nayan',
+          alternateName: 'nnn007',
+          url: 'https://nnn007.github.io',
+          image: `${siteUrl}${defaultImage}`,
+          sameAs: [
+            'https://github.com/nnn007',
+            'https://twitter.com/nayannilesh',
+            'https://www.linkedin.com/in/nilesh-nayan',
+            'https://www.instagram.com/42._me',
           ],
-          "jobTitle": "Software Engineer & AI Specialist",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Self-employed"
+          jobTitle: 'Software Engineer & AI Specialist',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'Self-employed',
           },
-          "description": "Nilesh Nayan is a software engineer and AI specialist specializing in software development, machine learning, and artificial intelligence.",
-          "knowsAbout": [
-            "Software Development",
-            "Machine Learning",
-            "Artificial Intelligence",
-            "Web Development",
-            "React",
-            "JavaScript",
-            "Python"
+          description:
+            'Nilesh Nayan is a software engineer and AI specialist specializing in software development, machine learning, and artificial intelligence.',
+          knowsAbout: [
+            'Software Development',
+            'Machine Learning',
+            'Artificial Intelligence',
+            'Web Development',
+            'React',
+            'JavaScript',
+            'Python',
           ],
-          "alumniOf": {
-            "@type": "Organization",
-            "name": "Software Engineering"
-          }
+          alumniOf: {
+            '@type': 'Organization',
+            name: 'Software Engineering',
+          },
         })}
       </script>
 
       {/* Structured Data - Website Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Nilesh Nayan Portfolio",
-          "alternateName": "Nilesh Nayan - Software Engineer & AI Specialist",
-          "url": siteUrl,
-          "description": "Nilesh Nayan's portfolio website showcasing software development, machine learning, and AI projects",
-          "publisher": {
-            "@type": "Person",
-            "name": "Nilesh Nayan"
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Nilesh Nayan Portfolio',
+          alternateName: 'Nilesh Nayan - Software Engineer & AI Specialist',
+          url: siteUrl,
+          description:
+            'Nilesh Nayan\'s portfolio website showcasing software development, machine learning, and AI projects',
+          publisher: {
+            '@type': 'Person',
+            name: 'Nilesh Nayan',
           },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://nnn007.github.io/search?q={search_term_string}"
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: 'https://nnn007.github.io/search?q={search_term_string}',
             },
-            "query-input": "required name=search_term_string"
-          }
+            'query-input': 'required name=search_term_string',
+          },
         })}
       </script>
     </Helmet>
@@ -154,10 +156,14 @@ Head.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
+  article: PropTypes.bool,
+  canonical: PropTypes.string,
 };
 
 Head.defaultProps = {
   title: null,
   description: null,
   image: null,
+  article: false,
+  canonical: null,
 };

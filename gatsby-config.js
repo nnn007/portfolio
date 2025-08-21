@@ -5,11 +5,12 @@ module.exports = {
     title: 'Nilesh Nayan - Software Engineer & AI Specialist | Portfolio',
     description:
       'Nilesh Nayan is a software engineer and AI specialist. View Nilesh Nayan\'s portfolio, projects, and blog posts on software development, machine learning, and artificial intelligence.',
-    siteUrl: 'https://nnn007.github.io', // No trailing slash allowed!
+    siteUrl: 'https://nilesh-nayan-portfolio.netlify.app', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@nayannilesh',
     author: 'Nilesh Nayan',
-    keywords: 'Nilesh Nayan, Nilesh Nayan portfolio, software engineer, machine learning, AI, artificial intelligence, web development, portfolio, software development, React, JavaScript, Python, developer, programmer',
+    keywords:
+      'Nilesh Nayan, Nilesh Nayan portfolio, software engineer, machine learning, AI, artificial intelligence, web development, portfolio, software development, React, JavaScript, Python, developer, programmer',
     language: 'en',
     siteName: 'Nilesh Nayan Portfolio',
   },
@@ -81,7 +82,7 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green },
+              backgroundColor: 'transparent',
             },
           },
           {
@@ -158,7 +159,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-XXXXXXXXXX", // Replace with your GA4 measurement ID
+          'G-XXXXXXXXXX', // Replace with your GA4 measurement ID
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
@@ -173,7 +174,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
     },

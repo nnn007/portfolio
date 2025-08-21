@@ -50,12 +50,20 @@ const StyledPostContent = styled.div`
 `;
 
 const PostTemplate = ({ data, location }) => {
+  if (!data?.markdownRemark) {
+    return (
+      <Layout location={location}>
+        <div>Post not found</div>
+      </Layout>
+    );
+  }
+
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags, description } = frontmatter;
 
   return (
     <Layout location={location}>
-      <Head 
+      <Head
         title={title}
         description={description}
         article={true}
@@ -67,7 +75,7 @@ const PostTemplate = ({ data, location }) => {
           items={[
             { label: 'Home', url: '/' },
             { label: 'Blog', url: '/pensieve' },
-            { label: title }
+            { label: title },
           ]}
         />
 
@@ -98,30 +106,30 @@ const PostTemplate = ({ data, location }) => {
       {/* Structured Data for Blog Post */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": title,
-          "description": description,
-          "author": {
-            "@type": "Person",
-            "name": "Nilesh Nayan",
-            "url": "https://nnn007.github.io"
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: title,
+          description: description,
+          author: {
+            '@type': 'Person',
+            name: 'Nilesh Nayan',
+            url: 'https://nnn007.github.io',
           },
-          "publisher": {
-            "@type": "Person",
-            "name": "Nilesh Nayan",
-            "url": "https://nnn007.github.io"
+          publisher: {
+            '@type': 'Person',
+            name: 'Nilesh Nayan',
+            url: 'https://nnn007.github.io',
           },
-          "datePublished": date,
-          "dateModified": date,
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://nnn007.github.io${frontmatter.slug}`
+          datePublished: date,
+          dateModified: date,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://nnn007.github.io${frontmatter.slug}`,
           },
-          "url": `https://nnn007.github.io${frontmatter.slug}`,
-          "keywords": tags ? tags.join(', ') : '',
-          "articleSection": "Blog",
-          "inLanguage": "en-US"
+          url: `https://nnn007.github.io${frontmatter.slug}`,
+          keywords: tags ? tags.join(', ') : '',
+          articleSection: 'Blog',
+          inLanguage: 'en-US',
         })}
       </script>
     </Layout>
@@ -136,7 +144,7 @@ PostTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { slug: { eq: $path } }) {
       html
       frontmatter {
