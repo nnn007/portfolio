@@ -83,7 +83,7 @@ const Head = ({ title, description, image, article, canonical }) => {
 
       {/* Google Site Verification */}
       <meta name="google-site-verification" content="41SFuC52dtfSOOqOb2ZUVhMe1GC_WZXy9siXBzl4Y0o" />
-      <meta name="google-site-verification" content="LP6fEXDXd2VjCsFwVhUQ6UcSjRSbjW9m5sWwDjEL0ZE" />
+      {/* <meta name="google-site-verification" content="LP6fEXDXd2VjCsFwVhUQ6UcSjRSbjW9m5sWwDjEL0ZE" /> */}
 
       {/* Structured Data - Person Schema */}
       <script type="application/ld+json">
